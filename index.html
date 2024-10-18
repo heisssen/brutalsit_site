@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura:wght@700&display=swap">
+
+</head>
+
+<body>
+<nav class="flex items-center justify-between p-2 bg-black text-white border-b-4 border-gray-800">
+    <!-- Logo -->
+    <div class="text-3xl font-extrabold font-mono tracking-tighter">
+        <a href="#">ARCHIBUREAU</a>
+    </div>
+
+    <!-- Hamburger Menu Button -->
+    <div class="md:hidden">
+        <button id="hamburger-btn" class="text-white focus:outline-none border-2 border-white p-1">
+            <!-- Raw Icon: Three bold horizontal lines -->
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="4" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="square" stroke-linejoin="miter" d="M3 7h18M3 12h18M3 17h18"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Menu Items -->
+    <ul id="menu" class="hidden md:flex space-x-4 uppercase font-extrabold text-xl border-l-4 border-gray-800 pl-4">
+        <li class="border-r-2 border-gray-700 pr-4"><a href="#home" class="hover:text-gray-500">Home</a></li>
+        <li class="border-r-2 border-gray-700 pr-4"><a href="#projects" class="hover:text-gray-500">Projects</a></li>
+        <li class="border-r-2 border-gray-700 pr-4"><a href="#about" class="hover:text-gray-500">About</a></li>
+        <li class="border-r-2 border-gray-700 pr-4"><a href="#services" class="hover:text-gray-500">Services</a></li>
+        <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+    </ul>
+</nav>
+
+
+<section class="flex items-center justify-center h-screen bg-gray-900 text-white relative border-b-4 border-gray-800" id="home">
+    <!-- Background Image (optional) -->
+    <div class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('bg.jpg'); opacity: 0.2;"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 text-center space-y-4 px-4">
+        <!-- Headline -->
+        <h1 class="text-6xl md:text-8xl font-extrabold font-mono tracking-tighter uppercase">
+            BUILDING THE FUTURE
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl md:text-2xl font-semibold font-mono tracking-wide">
+            Raw, Functional, Uncompromising Design
+        </p>
+
+        <!-- Call-to-Action Button -->
+        <a href="#projects"
+            class="inline-block bg-white text-black px-6 py-3 border-2 border-black font-bold uppercase tracking-widest hover:bg-gray-800 hover:text-white transition duration-150 ease-linear">
+            See Our Projects
+        </a>
+    </div>
+</section>
+
+<section class="p-8 bg-gray-100 text-gray-900 border-b-4 border-gray-800">
+    <!-- Section Heading -->
+    <h2 class="text-4xl md:text-5xl font-extrabold font-mono uppercase text-center tracking-tighter mb-8" id="projects">
+        Featured Projects
+    </h2>
+
+    <!-- Static Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Project Card Placeholder with Raw Animation and More Info -->
+        <div
+            class="group relative border-4 border-gray-800 bg-gray-300 h-64 flex items-center justify-center overflow-hidden">
+            <!-- Placeholder Text -->
+            <p
+                class="font-mono font-bold text-2xl text-gray-900 transition-transform duration-150 ease-linear group-hover:-translate-y-full">
+                Project 1
+            </p>
+
+            <!-- Hidden Project Information (Revealed on Hover) -->
+            <div
+                class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-linear text-white p-4">
+                <h3 class="font-bold text-lg uppercase mb-2">Project 1</h3>
+                <p class="text-sm font-mono text-center">A raw and functional design focused on urban landscapes. This
+                    project emphasizes form and function.</p>
+            </div>
+        </div>
+
+        <!-- Project Card Placeholder 2 -->
+        <div
+            class="group relative border-4 border-gray-800 bg-gray-300 h-64 flex items-center justify-center overflow-hidden">
+            <!-- Placeholder Text -->
+            <p
+                class="font-mono font-bold text-2xl text-gray-900 transition-transform duration-150 ease-linear group-hover:-translate-y-full">
+                Project 2
+            </p>
+
+            <!-- Hidden Project Information (Revealed on Hover) -->
+            <div
+                class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-linear text-white p-4">
+                <h3 class="font-bold text-lg uppercase mb-2">Project 2</h3>
+                <p class="text-sm font-mono text-center">A showcase of bold architectural forms, built with
+                    uncompromising materials for a lasting impact.</p>
+            </div>
+        </div>
+
+        <!-- Project Card Placeholder 3 -->
+        <div
+            class="group relative border-4 border-gray-800 bg-gray-300 h-64 flex items-center justify-center overflow-hidden">
+            <!-- Placeholder Text -->
+            <p
+                class="font-mono font-bold text-2xl text-gray-900 transition-transform duration-150 ease-linear group-hover:-translate-y-full">
+                Project 3
+            </p>
+
+            <!-- Hidden Project Information (Revealed on Hover) -->
+            <div
+                class="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-linear text-white p-4">
+                <h3 class="font-bold text-lg uppercase mb-2">Project 3</h3>
+                <p class="text-sm font-mono text-center">A tribute to brutalist ideals: concrete, raw forms, and
+                    utilitarian beauty are at the heart of this project.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="p-8 bg-gray-100 text-gray-900 border-b-4 border-gray-800" id="about">
+    <!-- Section Heading -->
+    <h2 class="text-4xl md:text-5xl font-extrabold font-mono uppercase text-center tracking-tighter mb-8">
+        About Us
+    </h2>
+
+    <!-- Split Layout Container -->
+    <div class="md:flex md:items-center md:justify-between space-y-8 md:space-y-0 md:space-x-8">
+        <!-- Image Container -->
+        <div class="md:w-1/2 border-4 border-gray-800 bg-gray-300 h-64 md:h-96 overflow-hidden">
+            <img src="team.jpg" alt="Architecture Bureau" class="w-full h-full object-cover grayscale">
+        </div>
+
+        <!-- Text Content -->
+        <div class="md:w-1/2 text-center md:text-left">
+            <p class="text-xl md:text-2xl font-mono font-bold tracking-wide leading-relaxed">
+                Our bureau believes in the beauty of raw materials, simplicity, and function-driven design. Founded on
+                principles of brutalist architecture, we aim to craft structures that make a bold statement and stand
+                the test of time.
+            </p>
+            <p class="mt-4 text-lg md:text-xl font-mono">
+                We work with concrete, steel, and honest materials that emphasize structure and purpose, with a strong
+                commitment to urban innovation and integrity.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="p-8 bg-gray-100 text-gray-900 border-b-4 border-gray-800" id="services">
+    <!-- Section Heading -->
+    <h2 class="text-4xl md:text-5xl font-extrabold font-mono uppercase text-center tracking-tighter mb-8">
+        Our Services
+    </h2>
+
+    <!-- Services Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Service Card -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-200 text-gray-900 flex flex-col justify-between h-72 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <h3 class="text-2xl font-bold font-mono uppercase mb-4 tracking-wide">
+                Urban Planning
+            </h3>
+            <p class="text-base font-mono">
+                Crafting cityscapes with a focus on functionality and raw, honest materials.
+            </p>
+        </div>
+
+        <!-- Service Card -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-200 text-gray-900 flex flex-col justify-between h-72 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <h3 class="text-2xl font-bold font-mono uppercase mb-4 tracking-wide">
+                Residential Design
+            </h3>
+            <p class="text-base font-mono">
+                Designing homes that balance rugged simplicity with livability, built to last.
+            </p>
+        </div>
+
+        <!-- Service Card -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-200 text-gray-900 flex flex-col justify-between h-72 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <h3 class="text-2xl font-bold font-mono uppercase mb-4 tracking-wide">
+                Commercial Projects
+            </h3>
+            <p class="text-base font-mono">
+                Building commercial spaces that make a bold statement with raw, functional aesthetics.
+            </p>
+        </div>
+
+        <!-- Service Card -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-200 text-gray-900 flex flex-col justify-between h-72 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <h3 class="text-2xl font-bold font-mono uppercase mb-4 tracking-wide">
+                Structural Consulting
+            </h3>
+            <p class="text-base font-mono">
+                Advising on structural integrity using honest materials, with a no-compromise approach.
+            </p>
+        </div>
+
+        <!-- Service Card -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-200 text-gray-900 flex flex-col justify-between h-72 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <h3 class="text-2xl font-bold font-mono uppercase mb-4 tracking-wide">
+                Public Spaces
+            </h3>
+            <p class="text-base font-mono">
+                Creating functional public spaces that embody utilitarian design and serve their community.
+            </p>
+        </div>
+
+        <!-- Service Card -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-200 text-gray-900 flex flex-col justify-between h-72 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <h3 class="text-2xl font-bold font-mono uppercase mb-4 tracking-wide">
+                Renovation & Adaptive Reuse
+            </h3>
+            <p class="text-base font-mono">
+                Breathing new life into existing structures while preserving their raw character.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="p-8 bg-gray-200 text-gray-900 border-b-4 border-gray-800">
+    <!-- Section Heading -->
+    <h2 class="text-4xl md:text-5xl font-extrabold font-mono uppercase text-center tracking-tighter mb-8">
+        What Our Clients Say
+    </h2>
+
+    <!-- Testimonials Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Testimonial 1 -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-100 text-gray-900 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <blockquote class="font-mono text-lg leading-relaxed">
+                "The team at ArchiBureau transformed our space into something beyond what we imagined—bold, functional,
+                and true to our vision."
+            </blockquote>
+            <footer class="mt-4 text-sm font-bold uppercase">
+                — John Doe, CEO of Urban Solutions
+            </footer>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-100 text-gray-900 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <blockquote class="font-mono text-lg leading-relaxed">
+                "Their work embodies brutalist design with precision. We were particularly impressed by their commitment
+                to raw materials and purpose-driven structures."
+            </blockquote>
+            <footer class="mt-4 text-sm font-bold uppercase">
+                — Jane Smith, Architect
+            </footer>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-100 text-gray-900 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <blockquote class="font-mono text-lg leading-relaxed">
+                "ArchiBureau brings an incredible blend of strength and creativity. They focus on functionality in a way
+                that makes a bold architectural statement."
+            </blockquote>
+            <footer class="mt-4 text-sm font-bold uppercase">
+                — Alex Johnson, Property Developer
+            </footer>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div
+            class="group border-4 border-gray-800 p-6 bg-gray-100 text-gray-900 transition-all duration-150 ease-linear hover:bg-gray-800 hover:text-white">
+            <blockquote class="font-mono text-lg leading-relaxed">
+                "They approach every project with a vision that is simple, raw, and functional. We are extremely pleased
+                with the outcome of our commercial building."
+            </blockquote>
+            <footer class="mt-4 text-sm font-bold uppercase">
+                — Sarah Lee, Business Owner
+            </footer>
+        </div>
+    </div>
+</section>
+
+<section class="p-8 bg-gray-200 text-gray-900 border-t-4 border-b-4 border-gray-800">
+    <!-- Section Heading -->
+    <h2 class="text-5xl font-extrabold font-mono uppercase text-center tracking-tight mb-8">
+        Contact Us
+    </h2>
+
+    <!-- Contact Container -->
+    <div class="flex flex-col md:flex-row md:space-x-8 items-stretch">
+        <!-- Contact Information -->
+        <div
+            class="md:w-1/2 bg-gray-800 text-white p-8 border-4 border-gray-800 mb-8 md:mb-0 flex flex-col justify-between">
+            <div>
+                <h3 class="text-2xl font-bold font-mono uppercase mb-4">
+                    Get in Touch
+                </h3>
+                <p class="text-lg font-mono mb-4">
+                    ArchiBureau
+                </p>
+                <p class="text-lg font-mono mb-4">
+                    123 Concrete Ave, <br>
+                    Metropolis, Urban State, 45678
+                </p>
+            </div>
+            <div>
+                <p class="text-lg font-mono mb-2">
+                    Phone: <span class="underline">+1 234 567 890</span>
+                </p>
+                <p class="text-lg font-mono">
+                    Email: <a href="mailto:info@archibureau.com"
+                        class="underline hover:text-gray-400">info@archibureau.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="md:w-1/2 border-4 border-gray-800 bg-white p-6 flex flex-col space-y-4">
+            <!-- Name Input -->
+            <div>
+                <label for="name" class="block text-lg font-bold font-mono mb-2 uppercase">
+                    Name
+                </label>
+                <input type="text" id="name" name="name"
+                    class="w-full p-3 border-2 border-gray-800 bg-gray-200 text-gray-900 font-mono focus:outline-none focus:bg-white focus:border-gray-600">
+            </div>
+
+            <!-- Email Input -->
+            <div>
+                <label for="email" class="block text-lg font-bold font-mono mb-2 uppercase">
+                    Email
+                </label>
+                <input type="email" id="email" name="email"
+                    class="w-full p-3 border-2 border-gray-800 bg-gray-200 text-gray-900 font-mono focus:outline-none focus:bg-white focus:border-gray-600">
+            </div>
+
+            <!-- Message Input -->
+            <div>
+                <label for="message" class="block text-lg font-bold font-mono mb-2 uppercase">
+                    Message
+                </label>
+                <textarea id="message" name="message" rows="5"
+                    class="w-full p-3 border-2 border-gray-800 bg-gray-200 text-gray-900 font-mono focus:outline-none focus:bg-white focus:border-gray-600"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+                class="w-full bg-gray-800 text-white text-lg font-bold font-mono uppercase p-4 border-2 border-gray-800 hover:bg-black transition-all duration-150 ease-linear">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+
+<footer class="p-8 bg-gray-900 text-white border-t-4 border-gray-800">
+    <!-- Footer Container -->
+    <div class="flex flex-col md:flex-row md:justify-between space-y-8 md:space-y-0 md:space-x-8">
+
+        <!-- Company Information -->
+        <div class="md:w-1/3">
+            <h3 class="text-2xl font-extrabold font-mono uppercase mb-4">
+                ArchiBureau
+            </h3>
+            <p class="text-lg font-mono">
+                123 Concrete Ave,<br>
+                Metropolis, Urban State, 45678
+            </p>
+            <p class="mt-4 text-lg font-mono">
+                Phone: <span class="underline">+1 234 567 890</span><br>
+                Email: <a href="mailto:info@archibureau.com"
+                    class="underline hover:text-gray-400">info@archibureau.com</a>
+            </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="md:w-1/3">
+            <h3 class="text-2xl font-extrabold font-mono uppercase mb-4">
+                Links
+            </h3>
+            <ul class="font-mono text-lg space-y-2">
+                <li><a href="#home" class="underline hover:text-gray-400">Home</a></li>
+                <li><a href="#projects" class="underline hover:text-gray-400">Projects</a></li>
+                <li><a href="#about" class="underline hover:text-gray-400">About</a></li>
+                <li><a href="#services" class="underline hover:text-gray-400">Services</a></li>
+                <li><a href="#contact" class="underline hover:text-gray-400">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="md:w-1/3">
+            <h3 class="text-2xl font-extrabold font-mono uppercase mb-4">
+                Follow Us
+            </h3>
+            <ul class="font-mono text-lg space-y-2">
+                <li><a href="#" class="underline hover:text-gray-400">LinkedIn</a></li>
+                <li><a href="#" class="underline hover:text-gray-400">Instagram</a></li>
+                <li><a href="#" class="underline hover:text-gray-400">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t-4 border-gray-800 mt-8 pt-4 text-center font-mono text-sm">
+        &copy; 2024 ArchiBureau. All Rights Reserved.
+    </div>
+</footer>
+
+
+
+
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('menu');
+
+    hamburgerBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        // Optionally, add a quick visibility effect to make it feel less "smooth" and more mechanical.
+    });
+</script>
+
+</body>
+
+</html>
