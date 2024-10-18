@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Bureau</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .brutalist-nav {
+            font-family: 'Arial Black', sans-serif;
+        }
+
+.hero {
+  background-color: #333; /* Fallback background color */
+}
+
+.hero h1, .hero p, .hero a {
+  color: #fff; /* Ensure text is white for high contrast */
+}
+
+.hero a:hover {
+  transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
+.services {
+  background-color: #f7fafc; /* Light grey background for the section */
+}
+
+.services h2, .services h3, .services p {
+  color: #000; /* Ensure text is black for high contrast */
+}
+
+.services .service-card {
+  background-color: #fff; /* White background for service cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  border: 2px solid #000; /* Add a black border for a more ragged look */
+}
+
+.services .service-card:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Add a black shadow on hover */
+  border: 6px solid black;
+}
+
+.portfolio {
+  background-color: #f7fafc; /* Light grey background for the section */
+}
+
+.portfolio h2, .portfolio h3, .portfolio p {
+  color: #000; /* Ensure text is black for high contrast */
+}
+
+.portfolio .portfolio-item {
+  background-color: #fff; /* White background for portfolio items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  border: 2px solid #000; /* Add a black border for a more ragged look */
+}
+
+.portfolio .portfolio-item:hover {
+  transform: scale(1.05); /* Slightly scale up the item on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Add a black shadow on hover */
+}
+
+.about-us {
+  background-color: #f7fafc; /* Light grey background for the section */
+}
+
+.about-us h2, .about-us p {
+  color: #000; /* Ensure text is black for high contrast */
+}
+
+.about-us img {
+  border: 2px solid #000; /* Add a black border for a more ragged look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.about-us img:hover {
+  transform: scale(1.05); /* Slightly scale up the image on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Add a black shadow on hover */
+}
+
+.contact {
+  background-color: #f7fafc; /* Light grey background for the section */
+}
+
+.contact h2, .contact h3, .contact p, .contact label, .contact input, .contact textarea, .contact button {
+  color: #000; /* Ensure text is black for high contrast */
+}
+
+.contact form {
+  background-color: #fff; /* White background for the form */
+  border: 4px solid #000; /* Add a thick black border for a more ragged look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+} 
+
+.contact input, .contact textarea {
+  border: 2px solid #000; /* Add a black border for a more ragged look */
+}
+
+.contact button {
+  background-color: #000; /* Black background for the button */
+  color: #fff; /* White text for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact button:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+.footer {
+  background-color: #000; /* Black background for the footer */
+}
+
+.footer h3, .footer p, .footer a {
+  color: #fff; /* Ensure text is white for high contrast */
+}
+
+.footer a:hover {
+  color: #bbb; /* Change text color on hover */
+}
+
+.footer svg {
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer svg:hover {
+  transform: scale(1.1); /* Slightly scale up the icon on hover */
+}
+
+
+
+
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <nav class="brutalist-nav p-4 border-b-4 border-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-3xl font-extrabold">
+                <a href="#">ARCHITECTURE BUREAU</a>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-lg font-bold hover:text-gray-300">HOME</a>
+                <a href="#" class="text-lg font-bold hover:text-gray-300">SERVICES</a>
+                <a href="#" class="text-lg font-bold hover:text-gray-300">PORTFOLIO</a>
+                <a href="#" class="text-lg font-bold hover:text-gray-300">ABOUT US</a>
+                <a href="#" class="text-lg font-bold hover:text-gray-300">CONTACT</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none" id="mobile-menu-button">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="#" class="block py-3 px-4 text-lg font-bold hover:bg-gray-700">HOME</a>
+            <a href="#" class="block py-3 px-4 text-lg font-bold hover:bg-gray-700">SERVICES</a>
+            <a href="#" class="block py-3 px-4 text-lg font-bold hover:bg-gray-700">PORTFOLIO</a>
+            <a href="#" class="block py-3 px-4 text-lg font-bold hover:bg-gray-700">ABOUT US</a>
+            <a href="#" class="block py-3 px-4 text-lg font-bold hover:bg-gray-700">CONTACT</a>
+        </div>
+    </nav>
+
+<section class="hero bg-cover bg-center h-screen flex flex-col justify-center items-center text-center relative"
+    style="background-image: url('bg.jpg');">
+    <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
+    <div class="relative z-10">
+        <h1 class="text-8xl md:text-9xl font-black text-white mb-6 uppercase tracking-widest">ARCHITECTURE BUREAU</h1>
+        <p class="text-3xl md:text-5xl font-extrabold text-white mb-12 uppercase tracking-wide">Innovative Designs for
+            Modern Living</p>
+        <a href="#"
+            class="bg-black text-white text-2xl font-black py-6 px-12 rounded-none hover:bg-gray-800 transition duration-300">Explore
+            Our Work</a>
+    </div>
+</section>
+
+
+<section class="services bg-gray-100 text-black py-20">
+    <div class="container mx-auto text-center">
+        <h2 class="text-6xl md:text-8xl font-black uppercase tracking-widest mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+                class="service-card p-6 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <h3 class="text-4xl font-extrabold uppercase mb-4">Architectural Design</h3>
+                <p class="text-lg font-bold">Our team specializes in creating innovative and sustainable architectural
+                    designs.</p>
+            </div>
+            <div
+                class="service-card p-6 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <h3 class="text-4xl font-extrabold uppercase mb-4">Interior Design</h3>
+                <p class="text-lg font-bold">We offer comprehensive interior design services to transform your spaces.
+                </p>
+            </div>
+            <div
+                class="service-card p-6 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <h3 class="text-4xl font-extrabold uppercase mb-4">Project Management</h3>
+                <p class="text-lg font-bold">Our expert project managers ensure your projects are completed on time and
+                    within budget.</p>
+            </div>
+            <div
+                class="service-card p-6 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <h3 class="text-4xl font-extrabold uppercase mb-4">Sustainable Solutions</h3>
+                <p class="text-lg font-bold">We focus on sustainable practices to create environmentally friendly
+                    designs.</p>
+            </div>
+            <div
+                class="service-card p-6 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <h3 class="text-4xl font-extrabold uppercase mb-4">Consulting Services</h3>
+                <p class="text-lg font-bold">Our consulting services provide expert advice for all your architectural
+                    needs.</p>
+            </div>
+            <div
+                class="service-card p-6 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <h3 class="text-4xl font-extrabold uppercase mb-4">Landscape Design</h3>
+                <p class="text-lg font-bold">We offer landscape design services to enhance the outdoor spaces of your
+                    projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio bg-gray-100 text-black py-20">
+    <div class="container mx-auto text-center">
+        <h2 class="text-6xl md:text-8xl font-black uppercase tracking-widest mb-12">Our Portfolio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+                class="portfolio-item p-4 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/400x300" alt="Project 1"
+                    class="w-full h-auto mb-4">
+                <h3 class="text-3xl font-extrabold uppercase mb-2">Project 1</h3>
+                <p class="text-lg font-bold">A stunning architectural design showcasing modern aesthetics.</p>
+            </div>
+            <div
+                class="portfolio-item p-4 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/400x300" alt="Project 2"
+                    class="w-full h-auto mb-4">
+                <h3 class="text-3xl font-extrabold uppercase mb-2">Project 2</h3>
+                <p class="text-lg font-bold">An innovative interior design project with a focus on sustainability.</p>
+            </div>
+            <div
+                class="portfolio-item p-4 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/400x300" alt="Project 3"
+                    class="w-full h-auto mb-4">
+                <h3 class="text-3xl font-extrabold uppercase mb-2">Project 3</h3>
+                <p class="text-lg font-bold">A comprehensive project management case study.</p>
+            </div>
+            <div
+                class="portfolio-item p-4 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/400x300" alt="Project 4"
+                    class="w-full h-auto mb-4">
+                <h3 class="text-3xl font-extrabold uppercase mb-2">Project 4</h3>
+                <p class="text-lg font-bold">A sustainable solutions project highlighting eco-friendly designs.</p>
+            </div>
+            <div
+                class="portfolio-item p-4 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/400x300" alt="Project 5"
+                    class="w-full h-auto mb-4">
+                <h3 class="text-3xl font-extrabold uppercase mb-2">Project 5</h3>
+                <p class="text-lg font-bold">A consulting services project providing expert architectural advice.</p>
+            </div>
+            <div
+                class="portfolio-item p-4 bg-white rounded-none shadow-lg transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/400x300" alt="Project 6"
+                    class="w-full h-auto mb-4">
+                <h3 class="text-3xl font-extrabold uppercase mb-2">Project 6</h3>
+                <p class="text-lg font-bold">A landscape design project enhancing outdoor spaces.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-us bg-gray-100 text-black py-20">
+    <div class="container mx-auto text-center md:text-left md:flex md:items-center md:justify-between">
+        <div class="md:w-1/2 md:pr-8">
+            <h2 class="text-6xl md:text-8xl font-black uppercase tracking-widest mb-6">About Us</h2>
+            <p class="text-2xl font-bold mb-4">Welcome to Architecture Bureau, where innovation meets design. Our team
+                of experienced architects and designers is dedicated to creating sustainable and inspiring spaces that
+                enhance the quality of life.</p>
+            <p class="text-2xl font-bold mb-4">With a focus on sustainability and cutting-edge technology, we strive to
+                deliver projects that not only meet but exceed our clients' expectations. Our portfolio spans a wide
+                range of projects, from residential to commercial, each showcasing our commitment to excellence and
+                innovation.</p>
+            <p class="text-2xl font-bold">Join us on our journey to shape the future of architecture.</p>
+        </div>
+        <div class="md:w-1/2 md:pl-8">
+            <img src="team.jpg" alt="About Us"
+                class="w-full h-auto rounded-none shadow-lg">
+        </div>
+    </div>
+</section>
+
+<section class="contact bg-gray-100 text-black py-20">
+    <div class="container mx-auto text-center md:text-left">
+        <h2 class="text-6xl md:text-8xl font-black uppercase tracking-widest mb-16">Contact Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="md:pr-8">
+                <h3 class="text-4xl font-extrabold uppercase mb-6">Get in Touch</h3>
+                <p class="text-2xl font-bold mb-4">Address: 123 Architecture Street, City, Country</p>
+                <p class="text-2xl font-bold mb-4">Phone: +1 (123) 456-7890</p>
+                <p class="text-2xl font-bold mb-4">Email: info@architecturebureau.com</p>
+            </div>
+            <div class="md:pl-8">
+                <form class="bg-white p-8 rounded-none shadow-lg border-4 border-black">
+                    <div class="mb-6">
+                        <label for="name" class="block text-2xl font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full p-4 text-xl font-bold border-2 border-black rounded-none" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-2xl font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full p-4 text-xl font-bold border-2 border-black rounded-none" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-2xl font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full p-4 text-xl font-bold border-2 border-black rounded-none" required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-black text-white text-2xl font-bold py-4 px-8 rounded-none hover:bg-gray-800 transition duration-300">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer bg-black text-white py-10">
+    <div class="container mx-auto text-center md:text-left md:flex md:justify-between md:items-center">
+        <div class="md:w-1/2">
+            <h3 class="text-4xl font-extrabold uppercase mb-4">Architecture Bureau</h3>
+            <p class="text-lg font-bold mb-4">© 2023 Architecture Bureau. All rights reserved.</p>
+        </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
